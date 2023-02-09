@@ -53,8 +53,11 @@ php artisan serve
 
 > Sort By Distance
 <ul>
-    <li>http://localhost:port/api/sort-by-distance</li>
+    <li>/api/sort-by-distance</li>
 </ul>
+
+<br>
+<br>
 
 > **Note**
 > For sql queries already exist in the SQL folder :smile:
