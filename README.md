@@ -1,5 +1,9 @@
 ## CRUD API
----------------------------------------------------
+
+<br>
+The following provides a way to install the requirements for the application. 
+<br> 
+
 ### Install 
 ---------------------------------------------------
 ##### 1. Clone Repository
@@ -55,6 +59,9 @@ php artisan serve
 <ul>
     <li>/api/sort-by-distance</li>
 </ul>
+<br>
+
+<img src="https://raw.githubusercontent.com/Marvelch/antikode/master/public/local/SortByDistance.jpg" width="600" height="400" />
 
 <br>
 <br>
