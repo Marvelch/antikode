@@ -45,39 +45,44 @@ Route::group(['prefix' => 'brands',  'as' => 'brand.'], function(){
 });
 
 Route::get('sort-by-distance',function() {
-    $outlets = outlet::all();
+    try {
+        $outlets = outlet::all();
 
-    $latMonas = -6.172043;
-    $lngMonas = 106.826327;
+        $latMonas = -6.172043;
+        $lngMonas = 106.826327;
 
-    $arrayOutletDistance = [];
+        $arrayOutletDistance = [];
 
-    foreach($outlets as  $outlet){
-        $outletName = $outlet->name;
-        $theta = $lngMonas - $outlet->longitude;
-        $miles = (sin(deg2rad($latMonas)) * sin(deg2rad($outlet->latitude))) + (cos(deg2rad($latMonas)) * cos(deg2rad($outlet->latitude)) * cos(deg2rad($theta)));
-        $miles = acos($miles);
-        $miles = rad2deg($miles);
-        $miles = $miles * 60 * 1.1515;
-        $feet  = $miles * 5280;
-        // $yards = $feet / 3;
-        $kilometers = $miles * 1.609344;
-        // $meters = $kilometers * 1000;
-        array_push($arrayOutletDistance,['namaOutlet' => $outletName,'jarak' => $kilometers]);
+        foreach($outlets as  $outlet){
+            $outletName = $outlet->name;
+            $theta = $lngMonas - $outlet->longitude;
+            $miles = (sin(deg2rad($latMonas)) * sin(deg2rad($outlet->latitude))) + (cos(deg2rad($latMonas)) * cos(deg2rad($outlet->latitude)) * cos(deg2rad($theta)));
+            $miles = acos($miles);
+            $miles = rad2deg($miles);
+            $miles = $miles * 60 * 1.1515;
+            $feet  = $miles * 5280;
+            // $yards = $feet / 3;
+            $kilometers = $miles * 1.609344;
+            // $meters = $kilometers * 1000;
+            array_push($arrayOutletDistance,['namaOutlet' => $outletName,'jarak' => $kilometers]);
+        }
+
+        $sortOutletDistance = array();
+
+        foreach($arrayOutletDistance as $key => $item) {
+            $sortOutletDistance[$key] = $item['jarak'];   
+        }
+
+        array_multisort($sortOutletDistance, SORT_ASC, $arrayOutletDistance);
+
+        return response()->json([
+            'Status' => 'Success',
+            'Data' => $arrayOutletDistance
+        ],200);
+    } catch(\Exception $e) {
+        return response()->json([
+            'Status' => 'Failed',
+            'Message' => 'Failed Log Data '.$e->getMessage()
+        ],400);
     }
-
-    $sortOutletDistance = array();
-
-    foreach($arrayOutletDistance as $key => $item) {
-        $sortOutletDistance[$key] = $item['jarak'];   
-        // echo sort($outlet['jarak']);
-        // foreach($outlet as $distance) {
-        //     // echo sort($distance);
-        //     echo $distance;
-        // }
-    }
-
-    array_multisort($sortOutletDistance, SORT_ASC, $arrayOutletDistance);
-    dd($arrayOutletDistance);
-    // return compact('arrayOutletDistance');
 });
