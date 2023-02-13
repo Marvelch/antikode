@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "d0f9b85e-747b-4435-8391-31f07a77284e",
+		"name": "Technical test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12801170"
+	},
+	"item": [
+		{
+			"name": "Antikode",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Marvel",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/batman-travels-facebook-cover.jpg"
+										},
+										{
+											"key": "brand_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/products/store",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"products",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Marvel Christevan",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/batman-travels-facebook-cover.jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/products/2/update",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"products",
+										"2",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Data",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Marvel",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/batman-travels-facebook-cover.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/products/store",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"products",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Marvel",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/batman-travels-facebook-cover.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/products/1/destroy",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"products",
+										"1",
+										"destroy"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Outlets",
+					"item": [
+						{
+							"name": "Create Outlets",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Marvel Wowiling",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/IMG_6516.JPG"
+										},
+										{
+											"key": "address",
+											"value": "Jalan Swasembada Barat",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/outlets/store",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"outlets",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Jaya Mandiri",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Jalan Daan Mogot",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/Sewakanaja Logo With Background.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/outlets/1/update",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"outlets",
+										"1",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Data",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://antikode.test/api/outlets",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"outlets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Marvel",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/batman-travels-facebook-cover.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/products/1/destroy",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"products",
+										"1",
+										"destroy"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Brands",
+					"item": [
+						{
+							"name": "Create Outlets",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Marvel Wowiling",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/IMG_6516.JPG"
+										},
+										{
+											"key": "address",
+											"value": "Jalan Swasembada Barat",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/outlets/store",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"outlets",
+										"store"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Jaya Mandiri",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Jalan Daan Mogot",
+											"type": "text"
+										},
+										{
+											"key": "picture",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/Sewakanaja Logo With Background.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/outlets/1/update",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"outlets",
+										"1",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Data",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://antikode.test/api/brands/show",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"brands",
+										"show"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Marvel",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/1257/Downloads/batman-travels-facebook-cover.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://antikode.test/api/products/1/destroy",
+									"protocol": "http",
+									"host": [
+										"antikode",
+										"test"
+									],
+									"path": [
+										"api",
+										"products",
+										"1",
+										"destroy"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sort By Distance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://antikode.test/api/brands/show",
+							"protocol": "http",
+							"host": [
+								"antikode",
+								"test"
+							],
+							"path": [
+								"api",
+								"brands",
+								"show"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
