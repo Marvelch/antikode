@@ -61,7 +61,7 @@ php artisan serve
 </ul>
 <br>
 
-<img src="https://raw.githubusercontent.com/Marvelch/antikode/master/public/local/SortByDistance.jpg" width="600" height="400" />
+<img src="https://raw.githubusercontent.com/Marvelch/antikode/master/public/local/UpdateResult.jpg" width="600" height="400" />
 
 <br>
 <br>
